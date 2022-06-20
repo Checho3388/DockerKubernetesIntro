@@ -1,0 +1,2 @@
+# Ejercicio6
+Imagen: https://hub.docker.com/layers/237612484/ezequielgrondona/passwordapi/1.0.0-redhat/images/sha256-827353ca956d760184200aa32ae114856288385f6d469ef2658b720de4c76406?context=repo&tab=layers
