@@ -6,7 +6,7 @@ docker run --env-file=.env nicopaez/telegrambot:0.0.7
 ```
 Al enviar `/version` el bot me responde con `0.0.7` tal como se muestra a continuación:
 
-![https://github.com/Checho3388/DockerKubernetesIntro/blob/main/ejercicio10/Screenshot%20from%202022-06-24%2016-41-41.png](Screenshot from 2022-06-24 16-41-41.png)
+![Screenshot](https://github.com/Checho3388/DockerKubernetesIntro/blob/main/ejercicio10/Screenshot%20from%202022-06-24%2016-41-41.png "Screenshot")
 
 
 ## Step 2
