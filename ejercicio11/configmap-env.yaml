@@ -5,5 +5,5 @@ metadata:
   labels:
     app: pingapp
 data:
-  CONFIG_LOCATION: /mydata/config.json
-  SECRETS_LOCATION: /mysecrets/secrets.json
+  CONFIG_LOCATION: "/mydata/config.json"
+  SECRETS_LOCATION: "/mysecrets/secret.json"
