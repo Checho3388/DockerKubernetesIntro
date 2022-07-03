@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: jobvacancy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jobvacancy
+  template:
+    metadata:
+      labels:
+        app: jobvacancy
+    spec:
+      containers:
+      - name: database
+        image: postgres:10.4-alpine
+        ports:
+          - containerPort: 5432
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgres-service
+  labels:
+    app: jobvacancy
+spec:
+  selector:
+    app: jobvacancy
+  ports:
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432
+  type: ClusterIP
