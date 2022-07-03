@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: passwordapi
+  labels:
+    app: passwordapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: passwordapi
+  template:
+    metadata:
+      labels:
+        app: passwordapi
+    spec:
+      containers:
+      - name: webapp
+        image: nicopaez/password-api:1.5.0-java
+        ports:
+          - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: "/actuator/health"
+            port: 8080
+          initialDelaySeconds: 120
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: "/actuator/health"
+            port: 8080
+          initialDelaySeconds: 120
+          failureThreshold: 6
